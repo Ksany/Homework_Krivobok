@@ -1,0 +1,33 @@
+<script>
+
+
+var dohod1= +prompt ("Введите доход в $");
+var dohod2= +prompt ("Введите сумму индивидуального налога в $");
+dohod= dohod1-dohod2;
+
+ if (dohod>=0 && dohod<=9525) {
+ var  nalog = dohod*0.1;
+    console.log (nalog);
+ } else if (dohod>=9526 && dohod<=38700) {
+    var  nalog = 952.5+(dohod-9525)*0.12;
+    console.log (nalog);
+} else if (dohod>=38701 && dohod<=82500) {
+    var  nalog = 4453+(dohod-38700)*0.22;
+    console.log (nalog);
+} else if (dohod>=82501 && dohod<= 157500) {
+    var  nalog = 14089.50+(dohod-82500)*0.24;
+    console.log (nalog);
+} else if (dohod>=157501 && dohod<= 200000) {
+    var  nalog = 32089.50+(dohod-157500)*0.32;
+    console.log (nalog);
+} else if (dohod>=200001 && dohod<= 500000) {
+    var  nalog = 45689.50+(dohod-200000)*0.35;
+    console.log (nalog);
+} else if (dohod>=500001) {
+    var  nalog = 150689.50+(dohod-500000)*0.37;
+    console.log (nalog);
+} else {
+console.log ("Введено недопустимое значение");
+}
+
+</script>

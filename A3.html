@@ -1,0 +1,76 @@
+<script>
+
+var sum = +prompt ("Введите сумму (в UAH)");
+
+
+var nom500= Math.floor (sum/500);
+if (nom500>10) {
+    nom500=10;
+}
+sum= sum-nom500 * 500;
+
+var nom200= Math.floor (sum/200);
+if (nom200>10) {
+    nom200=10;
+}
+sum= sum-nom200 * 200;
+ 
+var nom100= Math.floor (sum/100);
+if (nom100>10) {
+    nom100=10;
+}
+sum= sum-nom100 * 100;
+
+var nom50= Math.floor (sum/50);
+if (nom50>10) {
+    nom50=10;
+}
+sum= sum-nom50 * 50;
+
+var nom20= Math.floor (sum/20);
+if (nom20>10) {
+    nom20=10;
+}
+sum= sum-nom20 * 20;
+
+var nom10= Math.floor (sum/10);
+if (nom10>10) {
+    nom10=10;
+}
+sum= sum-nom10 * 10;
+
+var nom5= Math.floor (sum/5);
+if (nom5>10) {
+    nom5=10;
+}
+sum= sum-nom5 * 10;
+
+var nom2= Math.floor (sum/2);
+if (nom2>10) {
+    nom2=10;
+}
+sum= sum-nom2 * 10;
+
+var nom1= Math.floor (sum/1);
+if (nom1>10) {
+    nom1=10;
+}
+sum= sum-nom1 * 10;
+
+if (sum ===  0 ) {
+
+console.log ("купюр по 500 грн.*" +nom500);
+console.log ("купюр по 200 грн.*" +nom200);
+console.log ("купюр по 100 грн.*" +nom100);
+console.log ("купюр по 50 грн.*" +nom50);
+console.log ("купюр по 20 грн.*" +nom20);
+console.log ("купюр по 10 грн.*" +nom10);
+console.log ("купюр по 5 грн.*" +nom5);
+console.log ("купюр по 2 грн.*" +nom2);
+console.log ("купюр по 1 грн.*" +nom1);
+console.log ("суммарное количество купюр " +(nom500+nom200+nom100+nom50+nom20+nom10+nom5+nom2+nom1));
+}
+ else {
+console.log ( "задана неверная сумма" );
+}
+</script>

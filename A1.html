@@ -3,12 +3,14 @@
 
 var summa_vklada = +prompt ("Введите сумму вклада, (в UAH)");
 var kolichestvo_dney = +prompt ("Введите количество дней в году, (в днях)");
+
 var stavka = 22; //ставка по депозиту
 var srok = 1.5; //срок размещения депозита в годах
 
- if (kolichestvo_dney == 365 || 366) {
- var  dohod_v_god = summa_vklada*stavka*srok*kolichestvo_dney/kolichestvo_dney/100;
-    console.log (dohod_v_god);
+ if ( kolichestvo_dney == 365 || kolichestvo_dney == 366) {
+ var  dohod_v_god = Math.round((summa_vklada*stavka)/kolichestvo_dney)/100;
+ console.log (dohod_v_god);
+ 
  } else console.log ("Введено недопустимое значение количества дней в году");
 
 </script>
